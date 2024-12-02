@@ -46,10 +46,10 @@ CREATE TABLE IF NOT EXISTS weather_data.daily_weather (
 - Screenshot of records in the database.
 
 **Example Screenshot (Data Record):**
-![Data Record Screenshot](Images/image.png)
+![Data Record Screenshot](Images/main_postgresql.png)
 
 ### 4. Airflow Logs
-Provide screenshots of DAG performance and logs.
+screenshots of DAG performance and logs.
 
 **Example Screenshot (DAG Overview):**
 ![DAG Overview](<Images/image copy.png>)
@@ -57,22 +57,21 @@ Provide screenshots of DAG performance and logs.
 
 **Example Screenshot (Logs):**
 - Logs for checking API readiness.
-![checking API](<Images/image copy 2.png>)
+![checking API](<Images/check_api_log.png>)
 
 - Logs for fetching the data
-![Fetching Data](<Images/image copy 3.png>)
+![Fetching Data](<Images/fetch_weather_log.png>)
 
 - Logs for transforming the data
-![Transforming data](<Images/image copy 4.png>)
+![Transforming data](<Images/transform_log.png>)
 
 - Logs for loading the data
-![Loading data](<Images/image copy 5.png>)
-
-
+![Loading data](<Images/load_data_log.png>)
 - The log output from the Airflow task provides detailed information about the execution of the load_weather_data task in the weather data pipeline.
 
 ### 5. Architecture Diagram
 A visual representation of the architecture implemented in this project.
+![DAG Overview](<Images/airflow_performance1.png>)
 
 **Diagram Description:**
 - **Input Source**: OpenWeather API.
@@ -80,5 +79,5 @@ A visual representation of the architecture implemented in this project.
 - **Database**: PostgreSQL for storing transformed weather data.
 
 **Example Diagram:**
-![DAG Overview](<Images/image copy.png>)
+
 
