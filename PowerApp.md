@@ -1,5 +1,9 @@
-## 1. Environment Setup in Power Apps
+# Lab Exercise 2:
+
+## DE Taxi Demo Solution in Power Apps and Power Automate
+
 ### Create a Power Apps Environment
+
 - Sign in to Power Apps.
 - Navigate to the Environment section.
 - Click on **New** and create an environment named **DE Lecture**.
@@ -18,29 +22,45 @@
 - Select your DE Taxi Demo solution and click on New Flow.
 
 ### Email Processing
+
 - Choose the **When a new email arrives* trigger.  
 - Set conditions to trigger only when the email body or subject contains **"YellowTaxi"**.
 - Add an action to Get attachments and select the email.
 
     ![here](<PowerApp/Images/flow1.png>)
   
-- Use the Create file action to save the attachment to your OneDrive in the folder named **YelloTaxi**.
+- Use the Create file action to save the attachment to your OneDrive in the folder named ** DE PowerAutomate**.
 
 ![here](<PowerApp/Images/createfile.png>)
 
-### Data Transformation and Load
-- Add a Power Query action to load the data from the OneDrive file.
 
-![here](<PowerApp/Images/before_transform.png>)
+## Data Transformation and Load
 
-- This represents a view of the data after it has been successfully loaded from onedrive.
-- 
+### Add a Power Query action to load the data from the OneDrive file.
+
+- In the left navigation pane, click on Data.
+- Select Add data.
+- Choose OneDrive as the Data Source:
+- Look for the OneDrive for Business connector.
+- If prompted, sign in with your Microsoft account associated with OneDrive.
+  
+Navigate to Your file:
+- Once connected, browse through your OneDrive  DE PowerAutomate folder to locate the yello taxi csv file you want to load.
+- Select the file (e.g., an Excel or CSV file) and click Connect.
+Load Data into Power Query:
+- After connecting, you may see a preview of your data.
+- Click on Transform Data to open Power Query Editor.
+  
+![here](<PowerApp/Images/YellowProfile.png>)
+
+This represents a view of the data after it has been successfully loaded from onedrive.
+ 
 ### Implement the following transformations:
 - Remove unnecessary columns: Use the relevant Power Query option.
 - Filter out rows: Set a condition to exclude rows with drop-off coordinates equal to 0.
 - Parse coordinates: Convert coordinates to text format for compatibility.
 
-   ![here](<PowerApp/Images/YellowProfile.png>)
+![here](<PowerApp/Images/before_transform.png>)
 
 ### Data Storage in Dataverse
 - Use the Add a row action to load the transformed data into a Dataverse table named TaxiData.
@@ -58,6 +78,7 @@
   ![here](<PowerApp/Images/taxiprofile.png>)
 
 ### Notification
+
 - Add a final action to send an email notification when the data is refreshed in Dataverse, including an HTML table of the data profile.
   
 ![here](<PowerApp/Images/complete_flow.png>)
@@ -80,3 +101,6 @@ In PowerApps, select your DE TaxiDemo solution.
 Design a clean and user-friendly interface using Power Apps design features.
 
 ![here](<PowerApp/Images/YellowTaxiApp.png>)
+
+![here](<PowerApp/Images/map.png>)
+
