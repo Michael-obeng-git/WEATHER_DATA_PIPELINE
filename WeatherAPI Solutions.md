@@ -43,19 +43,21 @@ CREATE TABLE IF NOT EXISTS weather_data.daily_weather (
 ```
 
 ### 3. Database Image
+
 - Screenshot of records in the database.
 
-**Example Screenshot (Data Record):**
 ![Data Record Screenshot](Images/main_postgresql.png)
 
 ### 4. Airflow Logs
+
 screenshots of DAG performance and logs.
 
 **Example Screenshot (DAG Overview):**
-![DAG Overview](<Images/image copy.png>)
+
+DAGS runs summary display
+![DAG Overview](<Images/airflow_log1.png>)
 
 
-**Example Screenshot (Logs):**
 - Logs for checking API readiness.
 ![checking API](<Images/check_api_log.png>)
 
@@ -72,12 +74,5 @@ screenshots of DAG performance and logs.
 ### 5. Architecture Diagram
 A visual representation of the architecture implemented in this project.
 ![DAG Overview](<Images/airflow_performance1.png>)
-
-**Diagram Description:**
-- **Input Source**: OpenWeather API.
-- **ETL Workflow**: Managed by Airflow.
-- **Database**: PostgreSQL for storing transformed weather data.
-
-**Example Diagram:**
 
 
